@@ -25,10 +25,10 @@ public class LibraryProjectApplication {
 	@Bean
 	public CommandLineRunner runner(AuthorRepository authorRepository){
 		return args -> {
-			AuthorDTO Affiq = new AuthorDTO();
-			Affiq.setFullName("Affiq");
-			authorRepository.save(Affiq);
-			authorRepository.deleteById(1);
+//			AuthorDTO Affiq = new AuthorDTO();
+//			Affiq.setFullName("Affiq");
+//			authorRepository.save(Affiq);
+//			authorRepository.deleteById(1);
 
 			logger.log(Level.INFO,authorRepository.findAll().toString());
 		};
@@ -36,9 +36,6 @@ public class LibraryProjectApplication {
 	@Bean
 	public CommandLineRunner runner2(BookRepository bookRepository){
 		return args -> {
-
-
-
 			ArrayList<BookDTO> allBooks = (ArrayList<BookDTO>) bookRepository.findAll();
 			logger.log(Level.INFO,allBooks.toString());
 		};

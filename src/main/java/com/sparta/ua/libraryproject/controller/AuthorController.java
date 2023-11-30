@@ -48,4 +48,17 @@ public class AuthorController {
         }
         return authorRepository.save(author);
     }
+
+    @DeleteMapping("/author/{id}")
+    public void deleteAuthor(@PathVariable Integer id){
+        if(authorRepository.findById(id).isPresent()){
+            authorRepository.deleteById(id);
+        }
+    }
+
+    @PostMapping("/authors/add")
+    public void addAuthor(@RequestBody AuthorDTO newAuthor) {
+        authorRepository.save(newAuthor);
+    }
+
 }

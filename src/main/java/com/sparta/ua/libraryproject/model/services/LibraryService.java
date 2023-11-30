@@ -15,7 +15,7 @@ public class LibraryService {
     private AuthorRepository authorRepository;
     private BookRepository bookRepository;
 
-    @Autowired // in order to make this i need to make these first. it will go back and create everything that is needed until we can get what it is that we want(OBJECT).
+    @Autowired // in order to make this I need to make these first. it will go back and create everything that is needed until we can get what it is that we want(OBJECT).
     public LibraryService(AuthorRepository authorRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
